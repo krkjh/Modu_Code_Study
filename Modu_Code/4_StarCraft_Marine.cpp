@@ -78,6 +78,15 @@ void Marine::show_status()
 	std::cout << "HP: " << hp << std::endl;
 }
 
+Marine::~Marine()
+{
+	std::cout << name << " 의 소멸자 호출!" << std::endl;
+	if (name != NULL)
+	{
+		delete[] name;
+	}
+}
+
 int main()
 {
 	Marine* marines[100];
